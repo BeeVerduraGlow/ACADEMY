@@ -5,222 +5,200 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>BeeVerduraGlow Academy — Professional Cosmetic & Wellness Certifications</title>
 <meta name="description" content="Six professional faculties. 24 expert-led courses. Certifications in skincare, soap, haircare, perfumery, botanical science and spa therapy."/>
-<meta name="theme-color" content="#0D3F2E"/>
+<meta name="theme-color" content="#2C1810"/>
 <link rel="manifest" href="manifest.json"/>
 <link rel="icon" href="logo.png"/>
 <link rel="apple-touch-icon" href="logo.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --green:#0D3F2E;--green2:#1a5c42;--gold:#B8960C;--gold2:#d4af37;
-  --cream:#FAF8F3;--white:#ffffff;--dark:#0a0a0a;--gray:#6b7280;
-  --border:#e5e0d5;--radius:16px;
-}
+:root{--ink:#1C0F08;--brown:#2C1810;--brown2:#3d2218;--gold:#B8960C;--gold2:#d4af37;--gold3:#f0d060;--cream:#FAF6EE;--cream2:#F5EDD8;--cream3:#EDE0C4;--white:#FFFDF8;--gray:#7a6a5a;--border:#DDD0B8;--radius:18px}
 html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--dark);min-height:100vh;overflow-x:hidden}
-
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,42,30,0.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,150,12,0.2);padding:0 5%;height:66px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo img{height:42px;width:auto;object-fit:contain}
-.nav-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;letter-spacing:0.3px;line-height:1.2}
-.nav-sub{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,15,8,0.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(184,150,12,0.15);padding:0 5%;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-logo img{height:44px;width:auto;object-fit:contain}
+.nav-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;letter-spacing:0.5px;line-height:1.1}
+.nav-tagline{font-size:9px;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-top:2px}
 .nav-right{display:flex;gap:10px;align-items:center}
-.btn-nav{padding:9px 20px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .2s;letter-spacing:0.2px}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8)}
+.btn-nav{padding:10px 22px;border-radius:100px;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .25s;letter-spacing:0.5px}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.btn-gold{background:var(--gold);color:#fff}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
-
-/* ── HERO ── */
-.hero{min-height:100vh;background:linear-gradient(150deg,#061a12 0%,#0D3F2E 45%,#0a2d1e 100%);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden}
-.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(184,150,12,0.08) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.hero-pattern{position:absolute;inset:0;opacity:0.03;background-image:repeating-linear-gradient(45deg,#B8960C 0,#B8960C 1px,transparent 0,transparent 50%);background-size:20px 20px}
-.hero-inner{max-width:820px;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(184,150,12,0.12);border:1px solid rgba(184,150,12,0.25);border-radius:100px;padding:7px 18px;margin-bottom:36px}
-.hero-badge-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero-badge span{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,6.5vw,78px);font-weight:600;color:#fff;line-height:1.05;margin-bottom:28px;letter-spacing:-1.5px}
-.hero h1 em{color:var(--gold);font-style:italic}
-.hero-desc{font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,0.65);line-height:1.75;max-width:580px;margin:0 auto 48px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--ink);font-weight:600}
+.btn-gold:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(184,150,12,0.3)}
+.hero{min-height:100vh;background:var(--brown);display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(184,150,12,0.12) 0%,transparent 70%)}
+.hero-lines{position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,rgba(184,150,12,0.04) 0px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(184,150,12,0.04) 0px,transparent 1px,transparent 60px)}
+.hero-inner{max-width:860px;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(184,150,12,0.1);border:1px solid rgba(184,150,12,0.2);border-radius:100px;padding:8px 20px;margin-bottom:40px}
+.badge-pulse{width:7px;height:7px;background:var(--gold);border-radius:50%;animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+.hero-badge-text{font-size:11px;font-weight:500;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,7vw,84px);font-weight:500;color:var(--cream);line-height:1.0;margin-bottom:6px;letter-spacing:-2px}
+.hero h1 span{display:block;font-style:italic;color:var(--gold);font-weight:600}
+.hero-divider{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto}
+.hero-desc{font-size:clamp(15px,1.8vw,17px);color:rgba(250,246,238,0.6);line-height:1.8;max-width:560px;margin:0 auto 48px;font-weight:300}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-hero{padding:16px 38px;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;border:none;transition:all .3s;letter-spacing:0.2px}
-.btn-hero-primary{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(184,150,12,0.3)}
-.btn-hero-primary:hover{background:var(--gold2);transform:translateY(-3px);box-shadow:0 8px 32px rgba(184,150,12,0.4)}
-.btn-hero-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.25)}
+.btn-hero{padding:16px 40px;border-radius:100px;font-family:'Jost',sans-serif;font-size:15px;font-weight:500;cursor:pointer;border:none;transition:all .3s;letter-spacing:0.8px;text-transform:uppercase}
+.btn-hero-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--ink);font-weight:600;box-shadow:0 4px 24px rgba(184,150,12,0.25)}
+.btn-hero-primary:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(184,150,12,0.4)}
+.btn-hero-outline{background:transparent;color:var(--cream);border:1px solid rgba(250,246,238,0.2)}
 .btn-hero-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-stats{display:flex;gap:0;justify-content:center;margin-top:72px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap}
-.stat{text-align:center;padding:0 40px;border-right:1px solid rgba(255,255,255,0.1)}
+.hero-stats{display:flex;justify-content:center;margin-top:80px;padding-top:56px;border-top:1px solid rgba(184,150,12,0.15);flex-wrap:wrap;gap:0}
+.stat{text-align:center;padding:0 48px;border-right:1px solid rgba(184,150,12,0.15)}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--gold);display:block;line-height:1}
-.stat-label{font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1.5px;margin-top:8px;display:block}
-
-/* ── SECTIONS ── */
-.section{padding:96px 5%}
-.section-alt{background:#fff}
-.container{max-width:1120px;margin:0 auto}
-.section-label{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:14px}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4vw,52px);font-weight:600;color:var(--dark);line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px}
-.section-sub{font-size:16px;color:var(--gray);line-height:1.75;max-width:580px}
-.section-head{margin-bottom:60px}
-
-/* ── FACULTY CARDS ── */
-.faculties-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
-.faculty-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:all .35s;position:relative}
-.faculty-card:hover{transform:translateY(-6px);box-shadow:0 24px 56px rgba(13,63,46,0.13);border-color:var(--gold)}
-.faculty-card-top{padding:32px 32px 24px;position:relative;overflow:hidden}
-.faculty-card-top::after{content:'';position:absolute;bottom:-20px;right:-20px;width:100px;height:100px;background:rgba(255,255,255,0.07);border-radius:50%}
-.faculty-emoji{font-size:36px;margin-bottom:14px;display:block}
-.faculty-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#fff;line-height:1.3;margin-bottom:6px}
-.faculty-tagline{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.5}
-.faculty-card-bottom{padding:24px 32px 28px}
-.faculty-bundle-row{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
-.bundle-label{font-size:11px;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-.bundle-price{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--green)}
-.courses-count{font-size:13px;color:var(--gray);margin-bottom:18px}
-.btn-view-courses{width:100%;padding:13px;background:var(--green);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;letter-spacing:0.2px}
-.btn-view-courses:hover{background:var(--green2)}
-
-/* ── MODAL ── */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:200;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--gold);display:block;line-height:1}
+.stat-label{font-size:10px;color:rgba(250,246,238,0.4);text-transform:uppercase;letter-spacing:2px;margin-top:10px;display:block}
+.section{padding:100px 5%}
+.section-cream{background:var(--cream)}
+.section-white{background:var(--white)}
+.container{max-width:1140px;margin:0 auto}
+.section-label{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.5vw,56px);font-weight:500;color:var(--ink);line-height:1.1;margin-bottom:16px;letter-spacing:-1px}
+.section-sub{font-size:16px;color:var(--gray);line-height:1.8;max-width:560px;font-weight:300}
+.section-head{margin-bottom:64px}
+.faculties-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px}
+.faculty-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;cursor:pointer;transition:all .35s}
+.faculty-card:hover{transform:translateY(-8px);box-shadow:0 32px 64px rgba(44,24,16,0.12);border-color:var(--gold)}
+.faculty-card-top{padding:36px 32px 28px;position:relative;overflow:hidden}
+.faculty-emoji{font-size:38px;margin-bottom:16px;display:block}
+.faculty-name{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;color:#fff;line-height:1.25;margin-bottom:8px}
+.faculty-tagline{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6}
+.faculty-card-bottom{padding:24px 32px 30px}
+.bundle-label{font-size:10px;font-weight:600;color:var(--gray);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px}
+.bundle-price{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--brown);margin-bottom:6px}
+.courses-count{font-size:13px;color:var(--gray);margin-bottom:20px;font-weight:300}
+.btn-view{width:100%;padding:14px;background:var(--brown);color:var(--cream);border:none;border-radius:12px;font-family:'Jost',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;letter-spacing:0.8px;text-transform:uppercase}
+.btn-view:hover{background:var(--brown2)}
+.overlay{position:fixed;inset:0;background:rgba(28,15,8,0.7);z-index:200;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .overlay.open{opacity:1;pointer-events:all}
-.sheet{background:#fff;border-radius:24px 24px 0 0;width:100%;max-width:700px;max-height:92vh;overflow-y:auto;transform:translateY(100%);transition:transform .4s cubic-bezier(.32,.72,0,1)}
+.sheet{background:var(--white);border-radius:28px 28px 0 0;width:100%;max-width:720px;max-height:93vh;overflow-y:auto;transform:translateY(100%);transition:transform .42s cubic-bezier(.32,.72,0,1)}
 .overlay.open .sheet{transform:translateY(0)}
-.sheet-handle{width:40px;height:4px;background:#e5e0d5;border-radius:2px;margin:14px auto 0}
-.sheet-header{padding:20px 28px 18px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:sticky;top:0;background:#fff;z-index:1}
-.sheet-header-left{}
-.sheet-tag{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
-.sheet-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;line-height:1.2;color:var(--dark)}
-.sheet-subtitle{font-size:13px;color:var(--gray);margin-top:4px}
-.btn-close{width:34px;height:34px;border-radius:50%;background:var(--cream);border:1px solid var(--border);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gray)}
-.sheet-body{padding:24px 28px 40px}
-
-/* Course Items */
-.course-item{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:14px;transition:all .2s}
-.course-item:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(184,150,12,0.08)}
+.sheet-handle{width:44px;height:4px;background:var(--cream3);border-radius:2px;margin:16px auto 0}
+.sheet-header{padding:22px 32px 20px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:sticky;top:0;background:var(--white);z-index:1}
+.sheet-tag{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:7px}
+.sheet-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;line-height:1.2;color:var(--ink)}
+.sheet-sub{font-size:13px;color:var(--gray);margin-top:5px;font-weight:300}
+.btn-close{width:36px;height:36px;border-radius:50%;background:var(--cream);border:1px solid var(--border);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--gray)}
+.sheet-body{padding:28px 32px 48px}
+.course-item{background:var(--cream);border:1px solid var(--border);border-radius:14px;margin-bottom:18px;overflow:hidden;transition:border-color .2s}
+.course-item:hover{border-color:var(--gold)}
+.course-item-header{padding:22px 24px 18px}
 .course-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}
-.course-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--dark);line-height:1.3}
-.course-price-tag{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;color:var(--green);white-space:nowrap}
-.course-desc{font-size:13px;color:var(--gray);line-height:1.65;margin-bottom:14px}
-.course-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.tag{font-size:11px;font-weight:500;color:var(--green);background:rgba(13,63,46,0.07);padding:4px 10px;border-radius:100px;letter-spacing:0.3px}
-.btn-enroll-course{width:100%;padding:13px;background:var(--gold);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
-.btn-enroll-course:hover{background:var(--gold2)}
-
-/* Checkout */
-.order-summary{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px}
-.order-line{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px}
-.order-line:last-child{border-bottom:none;padding-top:14px;margin-top:4px}
-.order-line-label{color:var(--gray)}
-.order-line-val{font-weight:500;color:var(--dark)}
-.order-total-label{font-size:15px;font-weight:600;color:var(--dark)}
-.order-total-val{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--green)}
-.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-.pay-method{padding:18px 16px;border:1.5px solid var(--border);border-radius:12px;background:#fff;cursor:pointer;text-align:center;transition:all .2s;font-family:'DM Sans',sans-serif}
-.pay-method.active{border-color:var(--green);background:rgba(13,63,46,0.04)}
-.pay-method-icon{font-size:26px;display:block;margin-bottom:8px}
-.pay-method-name{font-size:13px;font-weight:600;color:var(--dark);margin-bottom:2px}
-.pay-method-hint{font-size:11px;color:var(--gray)}
-.field-label{font-size:11px;font-weight:600;color:var(--gray);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:8px}
-.field{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'DM Sans',sans-serif;font-size:15px;color:var(--dark);background:#fff;outline:none;transition:border-color .2s;margin-bottom:14px}
-.field:focus{border-color:var(--green)}
-.transfer-box{background:rgba(13,63,46,0.05);border:1px solid rgba(13,63,46,0.12);border-radius:12px;padding:22px;margin-bottom:16px}
-.transfer-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green);margin-bottom:14px}
-.transfer-line{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(13,63,46,0.08);font-size:14px}
+.course-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--ink);line-height:1.3}
+.course-price-tag{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--brown);white-space:nowrap}
+.course-desc{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:14px;font-weight:300}
+.course-tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:10px;font-weight:600;color:var(--brown);background:rgba(44,24,16,0.08);padding:4px 12px;border-radius:100px;letter-spacing:0.5px;text-transform:uppercase}
+.course-tabs{display:flex;border-top:1px solid var(--border);background:var(--white)}
+.course-tab{flex:1;padding:12px;font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border:none;background:transparent;color:var(--gray);transition:all .2s;border-bottom:2px solid transparent}
+.course-tab.active{color:var(--brown);border-bottom-color:var(--gold);background:var(--cream)}
+.course-tab-content{display:none;padding:20px 24px 24px;background:var(--cream)}
+.course-tab-content.active{display:block}
+.outline-module{margin-bottom:20px}
+.outline-module:last-child{margin-bottom:0}
+.outline-module-title{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--ink);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.outline-num{width:26px;height:26px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--ink);flex-shrink:0;font-family:'Jost',sans-serif}
+.outline-bullets{list-style:none;padding-left:36px}
+.outline-bullets li{font-size:13px;color:var(--gray);line-height:1.7;padding:3px 0;font-weight:300;position:relative}
+.outline-bullets li::before{content:'—';position:absolute;left:-20px;color:var(--gold);font-size:12px}
+.btn-enroll-main{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--ink);border:none;border-radius:12px;font-family:'Jost',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .25s;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:10px}
+.btn-enroll-main:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,150,12,0.3)}
+.enroll-note{font-size:12px;color:var(--gray);text-align:center;line-height:1.6;font-weight:300}
+.order-box{background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:24px}
+.order-line{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.order-line:last-child{border-bottom:none;padding-top:16px;margin-top:4px}
+.order-lbl{color:var(--gray);font-weight:300}
+.order-val{font-weight:500;color:var(--ink)}
+.order-total-lbl{font-size:15px;font-weight:600;color:var(--ink)}
+.order-total-val{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--brown)}
+.pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px}
+.pay-method{padding:18px 14px;border:1.5px solid var(--border);border-radius:14px;background:var(--white);cursor:pointer;text-align:center;transition:all .2s}
+.pay-method.active{border-color:var(--brown);background:rgba(44,24,16,0.04)}
+.pay-method-icon{font-size:28px;display:block;margin-bottom:8px}
+.pay-method-name{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.pay-method-hint{font-size:11px;color:var(--gray);font-weight:300}
+.field-lbl{font-size:10px;font-weight:600;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px}
+.field{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:12px;font-family:'Jost',sans-serif;font-size:15px;color:var(--ink);background:var(--white);outline:none;transition:border-color .2s;margin-bottom:14px;font-weight:300}
+.field:focus{border-color:var(--brown)}
+.transfer-box{background:rgba(44,24,16,0.04);border:1px solid rgba(44,24,16,0.12);border-radius:14px;padding:22px;margin-bottom:16px}
+.transfer-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--brown);margin-bottom:16px}
+.transfer-line{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(44,24,16,0.08);font-size:14px}
 .transfer-line:last-child{border-bottom:none}
-.transfer-key{color:var(--gray)}
-.transfer-val{font-weight:600;color:var(--dark)}
-.copy-btn{font-size:11px;background:var(--green);color:#fff;border:none;border-radius:6px;padding:3px 8px;cursor:pointer;margin-left:8px}
-.btn-pay{width:100%;padding:17px;background:var(--gold);color:#fff;border:none;border-radius:12px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:6px;letter-spacing:0.3px}
-.btn-pay:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 6px 20px rgba(184,150,12,0.3)}
+.transfer-key{color:var(--gray);font-weight:300}
+.transfer-val{font-weight:600;color:var(--ink)}
+.copy-btn{font-size:10px;background:var(--brown);color:var(--cream);border:none;border-radius:6px;padding:3px 8px;cursor:pointer;margin-left:8px;font-family:'Jost',sans-serif}
+.btn-pay{width:100%;padding:17px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--ink);border:none;border-radius:14px;font-family:'Jost',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .25s;margin-top:6px;letter-spacing:0.8px;text-transform:uppercase}
+.btn-pay:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,150,12,0.3)}
 .btn-pay:disabled{opacity:0.6;cursor:not-allowed;transform:none}
-.secure-row{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 0 0;font-size:12px;color:var(--gray)}
-
-/* Success */
-.success-wrap{text-align:center;padding:48px 24px}
-.success-circle{width:88px;height:88px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:40px}
-.success-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--dark);margin-bottom:14px}
-.success-text{font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:32px}
-
-/* Why Cards */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
-.why-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:all .3s}
-.why-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 32px rgba(13,63,46,0.08)}
-.why-icon{font-size:38px;margin-bottom:18px;display:block}
-.why-name{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:var(--dark);margin-bottom:8px}
-.why-text{font-size:14px;color:var(--gray);line-height:1.75}
-
-/* CTA Banner */
-.cta-banner{background:linear-gradient(135deg,var(--green) 0%,#061a12 100%);padding:80px 5%;text-align:center}
-.cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:600;color:#fff;margin-bottom:16px;letter-spacing:-0.5px}
-.cta-banner p{font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
-
-/* Footer */
-footer{background:#061a12;padding:56px 5% 32px}
-.footer-inner{max-width:1120px;margin:0 auto}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08)}
-.footer-brand{}
-.footer-logo-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#fff;margin-bottom:6px}
-.footer-brand-sub{font-size:13px;color:rgba(255,255,255,0.4);max-width:260px;line-height:1.6}
-.footer-links-group{}
-.footer-links-title{font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
-.footer-link{display:block;font-size:14px;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.secure-row{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 0 0;font-size:12px;color:var(--gray);font-weight:300}
+.success-wrap{text-align:center;padding:52px 24px}
+.success-circle{width:90px;height:90px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:42px;box-shadow:0 8px 32px rgba(184,150,12,0.3)}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--ink);margin-bottom:14px}
+.success-text{font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:36px;font-weight:300}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.why-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:36px;transition:all .3s}
+.why-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(44,24,16,0.08)}
+.why-icon{font-size:40px;margin-bottom:20px;display:block}
+.why-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.why-text{font-size:14px;color:var(--gray);line-height:1.8;font-weight:300}
+.cta-banner{background:var(--brown);padding:88px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(184,150,12,0.1) 0%,transparent 70%)}
+.cta-banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.5vw,56px);font-weight:500;color:var(--cream);margin-bottom:18px;letter-spacing:-1px;position:relative;z-index:1}
+.cta-banner h2 em{color:var(--gold);font-style:italic}
+.cta-banner p{font-size:16px;color:rgba(250,246,238,0.55);margin-bottom:40px;max-width:480px;margin-left:auto;margin-right:auto;font-weight:300;position:relative;z-index:1}
+footer{background:var(--ink);padding:64px 5% 36px}
+.footer-inner{max-width:1140px;margin:0 auto}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:48px;flex-wrap:wrap;margin-bottom:56px;padding-bottom:48px;border-bottom:1px solid rgba(250,246,238,0.06)}
+.footer-logo-name{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--cream);margin-bottom:8px}
+.footer-brand-sub{font-size:13px;color:rgba(250,246,238,0.35);max-width:260px;line-height:1.7;font-weight:300}
+.footer-links-title{font-size:10px;font-weight:600;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px}
+.footer-link{display:block;font-size:14px;color:rgba(250,246,238,0.45);text-decoration:none;margin-bottom:12px;transition:color .2s;font-weight:300}
 .footer-link:hover{color:var(--gold)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-copy{font-size:12px;color:rgba(255,255,255,0.25)}
-.footer-paystack{font-size:12px;color:rgba(255,255,255,0.25);display:flex;align-items:center;gap:6px}
-
-/* Toast */
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--dark);color:#fff;padding:14px 24px;border-radius:12px;font-size:14px;font-weight:500;z-index:999;transition:transform .3s;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.footer-copy{font-size:12px;color:rgba(250,246,238,0.2);font-weight:300}
+.footer-secure{font-size:12px;color:rgba(250,246,238,0.2);display:flex;align-items:center;gap:6px;font-weight:300}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:var(--ink);color:var(--cream);padding:14px 26px;border-radius:100px;font-size:13px;font-weight:500;z-index:999;transition:transform .3s;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,0.25);border:1px solid rgba(184,150,12,0.2)}
 .toast.show{transform:translateX(-50%) translateY(0)}
-
-/* Responsive */
 @media(max-width:640px){
-  .nav-title,.nav-sub{display:none}
-  .stat{padding:0 20px}
-  .stat-num{font-size:36px}
-  .hero-stats{gap:0}
-  .pay-methods{grid-template-columns:1fr 1fr}
-  .footer-top{flex-direction:column}
+  .nav-name,.nav-tagline{display:none}
+  .stat{padding:0 24px}
+  .stat-num{font-size:38px}
+  .footer-top{flex-direction:column;gap:36px}
   .footer-bottom{flex-direction:column;text-align:center}
+  .sheet-body{padding:20px 20px 40px}
+  .sheet-header{padding:18px 20px 16px}
 }
 </style>
 </head>
 <body>
-
 <nav>
   <a class="nav-logo" href="#">
-    <img src="logo.png" alt="BG Academy Logo"/>
+    <img src="logo.png" alt="BG Academy"/>
     <div>
-      <div class="nav-title">BeeVerduraGlow Academy</div>
-      <div class="nav-sub">Professional Certifications</div>
+      <div class="nav-name">BeeVerduraGlow Academy</div>
+      <div class="nav-tagline">Professional Certifications</div>
     </div>
   </a>
   <div class="nav-right">
-    <button class="btn-nav btn-ghost" onclick="scrollToFaculties()">Courses</button>
-    <button class="btn-nav btn-gold" onclick="scrollToFaculties()">Enroll Now</button>
+    <button class="btn-nav btn-ghost" onclick="scrollToEl('faculties')">Courses</button>
+    <button class="btn-nav btn-gold" onclick="scrollToEl('faculties')">Enroll Now</button>
   </div>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-pattern"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-lines"></div>
   <div class="hero-inner">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      <span>Now Enrolling — All Faculties Open</span>
-    </div>
-    <h1>Master the Science<br/>of <em>Beauty & Wellness</em></h1>
-    <p class="hero-desc">Six professional faculties. 24 expert-led courses. Certifications that launch careers and build profitable businesses in cosmetic science and wellness.</p>
+    <div class="hero-badge"><div class="badge-pulse"></div><span class="hero-badge-text">Now Enrolling · All Faculties Open</span></div>
+    <h1>Master the Art &<br/><span>Science of Beauty</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">Six professional faculties. Twenty-four expert-led courses. Certifications that launch careers and build profitable businesses in cosmetic science and wellness.</p>
     <div class="hero-cta">
-      <button class="btn-hero btn-hero-primary" onclick="scrollToFaculties()">Browse All Faculties</button>
-      <button class="btn-hero btn-hero-outline" onclick="scrollToWhy()">Why BVG Academy</button>
+      <button class="btn-hero btn-hero-primary" onclick="scrollToEl('faculties')">Browse All Faculties</button>
+      <button class="btn-hero btn-hero-outline" onclick="scrollToEl('why')">Why BVG Academy</button>
     </div>
     <div class="hero-stats">
       <div class="stat"><span class="stat-num">6</span><span class="stat-label">Faculties</span></div>
@@ -230,9 +208,7 @@ footer{background:#061a12;padding:56px 5% 32px}
     </div>
   </div>
 </section>
-
-<!-- FACULTIES -->
-<section id="faculties" class="section section-alt">
+<section id="faculties" class="section section-cream">
   <div class="container">
     <div class="section-head">
       <div class="section-label">Our Faculties</div>
@@ -242,9 +218,7 @@ footer{background:#061a12;padding:56px 5% 32px}
     <div class="faculties-grid" id="facultiesGrid"></div>
   </div>
 </section>
-
-<!-- WHY -->
-<section id="why" class="section">
+<section id="why" class="section section-white">
   <div class="container">
     <div class="section-head">
       <div class="section-label">Why BVG Academy</div>
@@ -253,141 +227,223 @@ footer{background:#061a12;padding:56px 5% 32px}
     </div>
     <div class="why-grid">
       <div class="why-card"><span class="why-icon">🔬</span><div class="why-name">Science-Based Curriculum</div><p class="why-text">Every formulation is backed by cosmetic chemistry. You understand the why — not just the how — so you can innovate independently.</p></div>
-      <div class="why-card"><span class="why-icon">🏆</span><div class="why-name">Professional Certificate</div><p class="why-text">Earn recognized certifications that open doors in salons, spas, cosmetic brands, and your own business.</p></div>
-      <div class="why-card"><span class="why-icon">💼</span><div class="why-name">Business-Ready Training</div><p class="why-text">Every faculty ends with a commercialization module — pricing, branding, packaging, and how to launch and sell.</p></div>
+      <div class="why-card"><span class="why-icon">🏆</span><div class="why-name">Professional Certificate</div><p class="why-text">Earn recognized certifications that open doors in salons, spas, cosmetic brands, and your own business across Nigeria.</p></div>
+      <div class="why-card"><span class="why-icon">💼</span><div class="why-name">Business-Ready Training</div><p class="why-text">Every faculty ends with a commercialization module — pricing, branding, packaging, and how to launch and sell profitably.</p></div>
       <div class="why-card"><span class="why-icon">📱</span><div class="why-name">Learn at Your Own Pace</div><p class="why-text">Access your courses from any device. No fixed schedule — study when it works for you, from anywhere in Nigeria.</p></div>
       <div class="why-card"><span class="why-icon">🌿</span><div class="why-name">100% Hands-On</div><p class="why-text">Real studio demonstrations, real formulation labs, real product development — not just slides and notes.</p></div>
       <div class="why-card"><span class="why-icon">💛</span><div class="why-name">Expert Mentorship</div><p class="why-text">Get guidance from formulators who have built real brands, trained real professionals, and understand the Nigerian market.</p></div>
     </div>
   </div>
 </section>
-
-<!-- CTA BANNER -->
 <div class="cta-banner">
-  <h2>Your Brand Starts With Your Knowledge</h2>
-  <p>Join hundreds of cosmetic professionals who have trained with BeeVerduraGlow Academy.</p>
-  <button class="btn-hero btn-hero-primary" onclick="scrollToFaculties()">Start Learning Today</button>
+  <h2>Your Brand Starts With<br/><em>Your Knowledge</em></h2>
+  <p>Join the community of cosmetic professionals trained by BeeVerduraGlow Academy.</p>
+  <button class="btn-hero btn-hero-primary" onclick="scrollToEl('faculties')" style="position:relative;z-index:1">Start Learning Today</button>
 </div>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand">
+      <div>
         <div class="footer-logo-name">BeeVerduraGlow Academy</div>
-        <div class="footer-brand-sub">Professional Cosmetic & Wellness Certifications · Lagos, Nigeria</div>
+        <div class="footer-brand-sub">Professional Cosmetic & Wellness Certifications · Ikorodu, Lagos, Nigeria</div>
       </div>
-      <div class="footer-links-group">
+      <div>
         <div class="footer-links-title">Academy</div>
-        <a class="footer-link" href="#faculties" onclick="scrollToFaculties()">All Faculties</a>
-        <a class="footer-link" href="#why" onclick="scrollToWhy()">Why Choose Us</a>
+        <a class="footer-link" href="#" onclick="scrollToEl('faculties')">All Faculties</a>
+        <a class="footer-link" href="#" onclick="scrollToEl('why')">Why Choose Us</a>
         <a class="footer-link" href="https://beebeeglow.com.ng" target="_blank">Shop Skincare</a>
       </div>
-      <div class="footer-links-group">
-        <div class="footer-links-title">Contact</div>
-        <a class="footer-link" href="mailto:hello@beebeeglow.com.ng">hello@beebeeglow.com.ng</a>
-        <a class="footer-link" href="https://wa.me/234" target="_blank">WhatsApp Us</a>
-        <a class="footer-link" href="https://beebeeglow.com.ng" target="_blank">beebeeglow.com.ng</a>
+      <div>
+        <div class="footer-links-title">Connect</div>
+        <a class="footer-link" href="mailto:info@beebeeglow.com.ng">info@beebeeglow.com.ng</a>
+        <a class="footer-link" href="https://wa.me/2348074340030" target="_blank">WhatsApp Us</a>
+        <a class="footer-link" href="https://instagram.com/beeverduraglow_academy" target="_blank">Instagram</a>
+        <a class="footer-link" href="https://tiktok.com/@beeverduraglow_academy" target="_blank">TikTok</a>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">© 2026 BeeVerduraGlow Academy · All rights reserved</div>
-      <div class="footer-paystack">🔒 Payments secured by Paystack</div>
+      <div class="footer-secure">🔒 Payments secured by Paystack</div>
     </div>
   </div>
 </footer>
-
-<!-- FACULTY SHEET -->
 <div class="overlay" id="facultyOverlay" onclick="closeFacultySheet(event)">
   <div class="sheet">
     <div class="sheet-handle"></div>
     <div class="sheet-header">
-      <div class="sheet-header-left">
-        <div class="sheet-tag" id="sheetTag">Faculty</div>
-        <div class="sheet-title" id="sheetTitle"></div>
-        <div class="sheet-subtitle" id="sheetSub"></div>
-      </div>
+      <div><div class="sheet-tag">Faculty</div><div class="sheet-title" id="sheetTitle"></div><div class="sheet-sub" id="sheetSub"></div></div>
       <button class="btn-close" onclick="closeFacultySheet()">✕</button>
     </div>
     <div class="sheet-body" id="sheetBody"></div>
   </div>
 </div>
-
-<!-- CHECKOUT SHEET -->
 <div class="overlay" id="checkoutOverlay" onclick="closeCheckout(event)">
   <div class="sheet">
     <div class="sheet-handle"></div>
     <div class="sheet-header">
-      <div class="sheet-header-left">
-        <div class="sheet-tag">Enrollment</div>
-        <div class="sheet-title" id="checkoutTitle"></div>
-        <div class="sheet-subtitle" id="checkoutSub"></div>
-      </div>
+      <div><div class="sheet-tag">Enrollment</div><div class="sheet-title" id="checkoutTitle"></div><div class="sheet-sub" id="checkoutSub"></div></div>
       <button class="btn-close" onclick="closeCheckout()">✕</button>
     </div>
     <div class="sheet-body" id="checkoutBody"></div>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-
 <script>
-const KEY = 'pk_live_ddf330ad3ecf5d532b9d2066034bfe6cd94aaf52';
-const fmt = n => '₦' + n.toLocaleString('en-NG');
-const genRef = () => 'BVG-' + Date.now().toString(36).toUpperCase();
-
-const FACULTIES = [
-  {id:'skincare',emoji:'🧴',name:'Faculty of Skincare Science',tagline:'Cosmetic chemistry · Serums · Clinical correction',color:'#0D3F2E',bundle:750000,
-   courses:[
-    {id:'sk1',title:'Core & Basic Formulations',price:300000,level:'Foundation',weeks:'8 weeks',desc:'Day & night face creams, body creams, glow & repair lotions, cleansers, toners, basic serums, pH balancing, preservation, and exfoliation science.'},
-    {id:'sk2',title:'Active & Treatment Formulations',price:200000,level:'Intermediate',weeks:'6 weeks',desc:'Vitamin C & Niacinamide serums, AHA/BHA exfoliation systems, acne treatments, brightening creams, and hyperpigmentation & dark spot correction.'},
-    {id:'sk3',title:'Advanced Clinical Correction',price:200000,level:'Advanced',weeks:'6 weeks',desc:'Ochronosis correction systems, stretchmark & knuckle treatments, advanced exfoliation protocols, and the science of safely layering actives.'},
-    {id:'sk4',title:'Commercial Production & Business',price:150000,level:'Mastery',weeks:'5 weeks',desc:'Scaling formulations, stability basics, pricing & profit calculation, documentation, compliance guidance, and brand positioning strategies.'},
+const KEY='pk_live_ddf330ad3ecf5d532b9d2066034bfe6cd94aaf52';
+const fmt=n=>'₦'+n.toLocaleString('en-NG');
+const genRef=()=>'BVG-'+Date.now().toString(36).toUpperCase();
+const FACULTIES=[
+  {id:'skincare',emoji:'🧴',name:'Faculty of Skincare Science',tagline:'Cosmetic chemistry · Serums · Clinical correction',color:'linear-gradient(135deg,#1a4a2e,#0d3020)',bundle:750000,courses:[
+    {id:'sk1',title:'Core & Basic Formulations',price:300000,level:'Foundation',weeks:'8 Weeks',desc:'Master the fundamentals of skincare formulation for professional practice.',outline:[
+      {mod:'Day & Night Face Creams',pts:['Emulsion theory and oil/water ratios','Skin-appropriate actives for day vs night','Professional finishing textures']},
+      {mod:'Body Creams & Lotions',pts:['Glow and repair body cream formulas','Lightweight body lotion systems','Slip agents and skin feel science']},
+      {mod:'Cleansers & Toners',pts:['pH-balanced facial cleansers','Surfactant selection for skin safety','Hydrating and balancing toners']},
+      {mod:'pH, Preservation & Exfoliation',pts:['Understanding cosmetic pH ranges','Broad-spectrum preservation systems','Physical and enzyme exfoliants']},
+    ]},
+    {id:'sk2',title:'Active & Treatment Formulations',price:200000,level:'Intermediate',weeks:'6 Weeks',desc:'Formulate high-performance serums and treatment products with proven actives.',outline:[
+      {mod:'Vitamin C & Niacinamide Serums',pts:['Vitamin C stabilization techniques','Niacinamide concentration science','Combining actives without conflicts']},
+      {mod:'AHA/BHA Exfoliation Systems',pts:['Glycolic, lactic and mandelic acids','Salicylic acid for acne-prone skin','Buffering and pH control for safety']},
+      {mod:'Acne Treatments',pts:['Sebum regulation actives','Anti-bacterial ingredient systems','Non-comedogenic formulation principles']},
+      {mod:'Brightening & Dark Spot Correction',pts:['Melanin inhibition ingredients','Hyperpigmentation correction layering','Safe brightening science']},
+    ]},
+    {id:'sk3',title:'Advanced Clinical Correction',price:200000,level:'Advanced',weeks:'6 Weeks',desc:'Tackle complex skin conditions with professional-grade correction formulations.',outline:[
+      {mod:'Ochronosis Correction Systems',pts:['Understanding ochronosis causes','Formulating targeted correction creams','Safe ingredients for severe hyperpigmentation']},
+      {mod:'Stretchmark & Knuckle Treatments',pts:['Collagen-supporting ingredient systems','Skin regeneration actives','Targeted delivery for textured skin']},
+      {mod:'Advanced Exfoliation Protocols',pts:['Multi-acid combination systems','Enzyme exfoliation for sensitive skin','Retinoid alternatives and integration']},
+      {mod:'Layering Actives Safely',pts:['Ingredient conflict management','Sequencing actives for maximum efficacy','Patch testing and stability protocol']},
+    ]},
+    {id:'sk4',title:'Commercial Production & Business',price:150000,level:'Mastery',weeks:'5 Weeks',desc:'Scale your formulations into a profitable, compliant skincare brand.',outline:[
+      {mod:'Scaling Formulations & Stability',pts:['Lab-to-production scaling calculations','Stability testing protocols','Batch documentation standards']},
+      {mod:'Pricing & Profit Calculation',pts:['Raw material costing systems','Retail markup and profit margins','Competitive pricing strategy']},
+      {mod:'Documentation & Compliance',pts:['NAFDAC registration guidance','Product labeling requirements','Safety data and ingredient disclosure']},
+      {mod:'Brand Positioning',pts:['Identifying your target market','Premium brand storytelling','Packaging and visual identity basics']},
+    ]},
   ]},
-  {id:'soap',emoji:'🧼',name:'Faculty of Soap & Cleanser Technology',tagline:'Black soap · Moroccan paste · Liquid cleansers',color:'#3D2F1F',bundle:300000,
-   courses:[
-    {id:'sp1',title:'African Black Soap Systems',price:120000,level:'Foundation',weeks:'5 weeks',desc:'Traditional & scoopable black soap, lowering alkalinity professionally, and treatment-focused black soap formulations for modern retail.'},
-    {id:'sp2',title:'Moroccan & Paste Soaps',price:80000,level:'Intermediate',weeks:'3 weeks',desc:'Moroccan paste base, exfoliating paste systems, and spa integration techniques for premium cleansing rituals.'},
-    {id:'sp3',title:'Bar Soap Technology',price:70000,level:'Intermediate',weeks:'3 weeks',desc:'Melt & pour modification, treatment bar soaps, and colour & additive science for professional bar soap production.'},
-    {id:'sp4',title:'Liquid Cleansers',price:60000,level:'Intermediate',weeks:'3 weeks',desc:'Shower gels & hand wash, foaming cleansers, and professional presentation for retail-ready liquid cleansing products.'},
+  {id:'soap',emoji:'🧼',name:'Faculty of Soap & Cleanser Technology',tagline:'Black soap · Moroccan paste · Liquid cleansers',color:'linear-gradient(135deg,#4a2a10,#301a08)',bundle:300000,courses:[
+    {id:'sp1',title:'African Black Soap Systems',price:120000,level:'Foundation',weeks:'5 Weeks',desc:'Master traditional and modern African black soap formulation for professional retail.',outline:[
+      {mod:'Traditional Black Soap',pts:['Plantain ash and cocoa pod preparation','Traditional saponification process','Quality control for traditional soap']},
+      {mod:'Scoopable Black Soap',pts:['Texture modification techniques','Lowering harshness for sensitive skin','Retail-ready scoopable consistency']},
+      {mod:'Lowering Alkalinity Professionally',pts:['pH testing and adjustment','Acid and buffer systems','Skin-safe alkalinity ranges']},
+      {mod:'Treatment-Focused Black Soap',pts:['Adding actives to black soap base','Anti-acne and brightening black soap','Packaging and branding treatment soap']},
+    ]},
+    {id:'sp2',title:'Moroccan & Paste Soaps',price:80000,level:'Intermediate',weeks:'3 Weeks',desc:'Create luxury Moroccan paste soaps and exfoliating systems for spa markets.',outline:[
+      {mod:'Moroccan Paste Base',pts:['Authentic beldi soap formulation','Potassium hydroxide saponification','Traditional vs modern methods']},
+      {mod:'Exfoliating Paste Systems',pts:['Natural scrub agent selection','Kessa glove compatibility formulas','Customizing exfoliation intensity']},
+      {mod:'Spa Integration',pts:['Spa treatment menu positioning','Luxury packaging for paste soaps','Pricing spa cleansing rituals']},
+    ]},
+    {id:'sp3',title:'Bar Soap Technology',price:70000,level:'Intermediate',weeks:'3 Weeks',desc:'Transform melt & pour bases into premium treatment bar soaps.',outline:[
+      {mod:'Melt & Pour Modification',pts:['Selecting quality M&P bases','Adding oils, butters and actives','Preventing sweating and cracking']},
+      {mod:'Treatment Bar Soaps',pts:['Anti-acne bar soap formulation','Brightening and exfoliating bars','Moisturizing bar soap systems']},
+      {mod:'Colour & Additive Science',pts:['Safe cosmetic colorants','Natural vs synthetic colourants','Botanical and fragrance additions']},
+    ]},
+    {id:'sp4',title:'Liquid Cleansers',price:60000,level:'Intermediate',weeks:'3 Weeks',desc:'Formulate professional shower gels, hand wash and foaming cleansers.',outline:[
+      {mod:'Shower Gels & Hand Wash',pts:['Surfactant blend selection','Moisturizing liquid cleanser systems','Viscosity adjustment techniques']},
+      {mod:'Foaming Cleansers',pts:['Foam boosting ingredient systems','Low-irritation foaming formulas','Face vs body cleanser differences']},
+      {mod:'Professional Presentation',pts:['Bottle and pump selection','Labeling and branding liquid cleansers','Pricing structure for liquid soap']},
+    ]},
   ]},
-  {id:'haircare',emoji:'💇🏽‍♀️',name:'Faculty of Haircare Science',tagline:'Shampoos · Conditioners · Scalp therapy',color:'#4A2020',bundle:500000,
-   courses:[
-    {id:'hc1',title:'Shampoo Systems',price:180000,level:'Foundation',weeks:'5 weeks',desc:'Moisturizing, clarifying & neutralizing shampoos, and specialized treatment shampoos for all hair types and conditions.'},
-    {id:'hc2',title:'Conditioner & Leave-In Systems',price:150000,level:'Intermediate',weeks:'4 weeks',desc:'Rinse-out & deep conditioners, leave-in creams & sprays for softness, moisture retention, and professional detangling.'},
-    {id:'hc3',title:'Treatment & Repair Formulations',price:120000,level:'Advanced',weeks:'4 weeks',desc:'Hair masks & protein treatments, growth oils & serums for deep repair, follicle stimulation, and scalp health.'},
-    {id:'hc4',title:'Scalp Science & Commercial Structure',price:100000,level:'Mastery',weeks:'4 weeks',desc:'Dandruff & scalp-balancing systems, production scaling, and building and pricing a professional haircare brand.'},
+  {id:'haircare',emoji:'💇🏽‍♀️',name:'Faculty of Haircare Science',tagline:'Shampoos · Conditioners · Scalp therapy',color:'linear-gradient(135deg,#4a1a1a,#2d1010)',bundle:500000,courses:[
+    {id:'hc1',title:'Shampoo Systems',price:180000,level:'Foundation',weeks:'5 Weeks',desc:'Formulate professional shampoos for all hair types and conditions.',outline:[
+      {mod:'Moisturizing Shampoos',pts:['Mild surfactant selection for moisture','Conditioning agents in shampoo','Curl-friendly and natural hair formulas']},
+      {mod:'Clarifying & Neutralizing Shampoos',pts:['Deep cleansing surfactant systems','Chelating agents for buildup removal','Neutralizing shampoo for relaxed hair']},
+      {mod:'Specialized Treatment Shampoos',pts:['Anti-dandruff active ingredients','Growth-stimulating shampoo systems','Color-safe and protein shampoos']},
+      {mod:'Surfactant Selection & Safety',pts:['Anionic vs amphoteric surfactants','Eye irritation and skin safety','Concentration limits for scalp health']},
+    ]},
+    {id:'hc2',title:'Conditioner & Leave-In Systems',price:150000,level:'Intermediate',weeks:'4 Weeks',desc:'Master conditioning systems for softness, moisture, and detangling.',outline:[
+      {mod:'Rinse-Out Conditioners',pts:['Cationic conditioning agents','Slip and detangling ingredient systems','Lightweight vs rich conditioner formulas']},
+      {mod:'Deep Conditioners',pts:['Penetrating oil and butter systems','Protein and moisture balance','Hot oil treatment formulation']},
+      {mod:'Leave-In Creams',pts:['Non-greasy leave-in emulsions','Curl-defining leave-in formulas','Heat protection integration']},
+      {mod:'Leave-In Sprays',pts:['Water-based leave-in systems','Daily moisture spray formulation','Fragrance and preservation for sprays']},
+    ]},
+    {id:'hc3',title:'Treatment & Repair Formulations',price:120000,level:'Advanced',weeks:'4 Weeks',desc:'Deep repair and scalp health solutions for professional hair treatments.',outline:[
+      {mod:'Hair Masks',pts:['Intensive moisture recovery masks','Strengthening and repair mask bases','Natural butter and oil integration']},
+      {mod:'Protein Treatments',pts:['Hydrolyzed protein selection','Protein-moisture balance science','Bond-building treatment systems']},
+      {mod:'Growth Oils',pts:['Follicle-stimulating botanical oils','Scalp massage oil formulation','Anti-breakage oil blends']},
+      {mod:'Scalp Serums',pts:['Active ingredients for scalp health','Anti-inflammatory scalp serums','Lightweight serum delivery systems']},
+    ]},
+    {id:'hc4',title:'Scalp Science & Commercial Structure',price:100000,level:'Mastery',weeks:'4 Weeks',desc:'Build a professional haircare brand with scalp expertise.',outline:[
+      {mod:'Dandruff & Scalp-Balancing Systems',pts:['Zinc pyrithione and ketoconazole use','Seborrheic dermatitis formulation approach','pH balancing for scalp health']},
+      {mod:'Production Scaling',pts:['Batch scaling from lab to production','Raw material sourcing in Nigeria','Quality control for haircare products']},
+      {mod:'Pricing Your Brand',pts:['Haircare product costing','Competitive positioning strategy','Building a haircare brand identity']},
+    ]},
   ]},
-  {id:'perfumery',emoji:'🌸',name:'Faculty of Perfumery & Fragrance Science',tagline:'Arabian mastery · Duplication · Longevity science',color:'#2D1B3D',bundle:500000,
-   courses:[
-    {id:'pf1',title:'Arabian Perfume Mastery',price:200000,level:'Foundation',weeks:'6 weeks',desc:'Oud structures & oil-based blends, creating long-lasting concentrated Arabian perfumes with depth and cultural heritage.'},
-    {id:'pf2',title:'International Duplication Techniques',price:150000,level:'Intermediate',weeks:'4 weeks',desc:'Scent profiling, brand-style reconstruction, concentration ratios, and top note mastery for international fragrance styles.'},
-    {id:'pf3',title:'Fixatives & Longevity Science',price:100000,level:'Advanced',weeks:'3 weeks',desc:'Base note mastery, stabilization science, and projection & sillage control for perfumes that last all day.'},
-    {id:'pf4',title:'Branding & Commercialization',price:100000,level:'Mastery',weeks:'3 weeks',desc:'Bottle sourcing, pricing, and market positioning — everything to launch your own professional fragrance brand.'},
+  {id:'perfumery',emoji:'🌸',name:'Faculty of Perfumery & Fragrance Science',tagline:'Arabian mastery · Duplication · Longevity science',color:'linear-gradient(135deg,#2d1040,#1a0828)',bundle:500000,courses:[
+    {id:'pf1',title:'Arabian Perfume Mastery',price:200000,level:'Foundation',weeks:'6 Weeks',desc:'Master the art of concentrated Arabian perfumery from oud to finished attar.',outline:[
+      {mod:'Oud Structures & Heritage',pts:['Oud sourcing and quality grading','Traditional Arabian fragrance families','Building oud-forward compositions']},
+      {mod:'Oil-Based Blends',pts:['Perfume oil vs alcohol-based formulas','Carrier oil selection for longevity','Concentration ratios for oil perfumes']},
+      {mod:'Long-Lasting Concentrated Perfumes',pts:['Extrait and attar formulation','Mukhallat and layering techniques','Projection science for oil perfumes']},
+      {mod:'The Arabian Fragrance Pyramid',pts:['Top, heart and base note selection','Traditional Arabian accord building','Creating signature oud compositions']},
+    ]},
+    {id:'pf2',title:'International Duplication Techniques',price:150000,level:'Intermediate',weeks:'4 Weeks',desc:'Deconstruct and recreate luxury fragrance brand signatures professionally.',outline:[
+      {mod:'Scent Profiling',pts:['Training olfactory recognition','Fragrance family classification','Identifying dominant accords by smell']},
+      {mod:'Brand-Style Reconstruction',pts:['Deconstructing luxury fragrance profiles','Finding affordable alternative materials','Building brand-style accords legally']},
+      {mod:'Concentration Ratios',pts:['EDP vs EDT vs Parfum differences','Dilution mathematics and calculations','Adjusting concentration for markets']},
+      {mod:'Top Note Mastery',pts:['Volatile ingredient selection','Opening impression engineering','Bridging top to heart smoothly']},
+    ]},
+    {id:'pf3',title:'Fixatives & Longevity Science',price:100000,level:'Advanced',weeks:'3 Weeks',desc:'Engineer perfumes with exceptional lasting power and projection.',outline:[
+      {mod:'Base Note Mastery',pts:['Musks, resins and woody base materials','Natural vs synthetic fixatives','Building a lasting fragrance foundation']},
+      {mod:'Stabilization Science',pts:['Ingredient stability testing','Preventing fragrance degradation','UV and heat protection in formulas']},
+      {mod:'Projection & Sillage Control',pts:['Sillage engineering techniques','Boosting diffusion of heavy oils','Balancing longevity with wearability']},
+    ]},
+    {id:'pf4',title:'Branding & Commercialization',price:100000,level:'Mastery',weeks:'3 Weeks',desc:'Launch your own professional fragrance brand in Nigeria and beyond.',outline:[
+      {mod:'Bottle Sourcing',pts:['Local and international bottle suppliers','Minimum order quantities and costs','Bottle selection for brand positioning']},
+      {mod:'Pricing & Market Positioning',pts:['Fragrance costing calculations','Premium vs mass market strategy','Online and offline sales channels']},
+      {mod:'Launching Your Fragrance Brand',pts:['Brand naming and storytelling','Social media for fragrance brands','Building a fragrance house identity']},
+    ]},
   ]},
-  {id:'botanical',emoji:'🌿',name:'Faculty of Botanical & Therapeutic Science',tagline:'Herbal extraction · Wellness systems · Commercialization',color:'#1E3D1E',bundle:600000,
-   courses:[
-    {id:'bo1',title:'Herbal Extraction & Concentration',price:200000,level:'Foundation',weeks:'6 weeks',desc:'Oil infusion, maceration, decoction & alcohol extraction — preparing concentrated active botanical extracts for formulation.'},
-    {id:'bo2',title:'General Wellness Formulations',price:150000,level:'Intermediate',weeks:'5 weeks',desc:'Immune-boosting & detoxifying blends, anti-inflammatory & stress-relief herbal oils for modern wellness consumers.'},
-    {id:'bo3',title:'Functional & Targeted Systems',price:150000,level:'Advanced',weeks:'5 weeks',desc:'Weight management, flat tummy & body shaping support, and reproductive wellness herbal formulations.'},
-    {id:'bo4',title:'Commercialization & Product Structuring',price:100000,level:'Mastery',weeks:'4 weeks',desc:'Preservation & shelf-life optimization, packaging, branding, and building a profitable pricing structure for your botanical brand.'},
+  {id:'botanical',emoji:'🌿',name:'Faculty of Botanical & Therapeutic Science',tagline:'Herbal extraction · Wellness systems · Commercialization',color:'linear-gradient(135deg,#1a3d1a,#0d2410)',bundle:600000,courses:[
+    {id:'bo1',title:'Herbal Extraction & Concentration',price:200000,level:'Foundation',weeks:'6 Weeks',desc:'Master all extraction methods to create potent, concentrated botanical actives.',outline:[
+      {mod:'Oil Infusion & Maceration',pts:['Cold and warm infusion techniques','Selecting carrier oils for infusion','Botanical material preparation']},
+      {mod:'Decoction Techniques',pts:['Water extraction for hard botanicals','Concentration and reduction methods','Stability of water-based extracts']},
+      {mod:'Alcohol Extraction',pts:['Tincture making fundamentals','Alcohol percentage selection','Concentration and preservation']},
+      {mod:'Preparing Concentrated Extracts',pts:['Standardizing extract potency','Glycerin and other solvent extracts','Shelf life and storage of extracts']},
+    ]},
+    {id:'bo2',title:'General Wellness Formulations',price:150000,level:'Intermediate',weeks:'5 Weeks',desc:'Create evidence-based wellness products for the Nigerian and global market.',outline:[
+      {mod:'Immune-Boosting Blends',pts:['Key immunomodulatory botanicals','Tonic formulation for daily use','Dosage and concentration guidance']},
+      {mod:'Detoxifying Formulations',pts:['Liver and lymph support botanicals','Detox teas, tonics and body products','Safety and contraindication awareness']},
+      {mod:'Anti-Inflammatory Oils',pts:['Anti-inflammatory botanical actives','Carrier oil selection for joint and muscle','Body oil and balm formulation']},
+      {mod:'Stress-Relief Herbal Systems',pts:['Adaptogen herb selection','Aromatherapy and herbal integration','Evening and sleep support formulas']},
+    ]},
+    {id:'bo3',title:'Functional & Targeted Systems',price:150000,level:'Advanced',weeks:'5 Weeks',desc:'Formulate targeted botanical systems for body transformation and wellness.',outline:[
+      {mod:'Weight Management Systems',pts:['Weight loss support botanicals','Appetite and metabolism herbs','Safe weight gain herbal support']},
+      {mod:'Flat Tummy & Body Shaping',pts:['Digestive wellness formulations','Anti-bloating herbal blends','Topical body shaping oil systems']},
+      {mod:'Reproductive Wellness Formulations',pts:['Hormonal balance supporting herbs','Menstrual wellness formulations','Herbal wellness for reproductive health']},
+    ]},
+    {id:'bo4',title:'Commercialization & Product Structuring',price:100000,level:'Mastery',weeks:'4 Weeks',desc:'Build a sustainable, profitable botanical wellness brand.',outline:[
+      {mod:'Preservation & Shelf-Life',pts:['Natural preservation for botanical products','Water activity and microbial control','Packaging for extended shelf life']},
+      {mod:'Packaging & Branding',pts:['Amber and dark glass packaging','Label design for wellness products','Wellness brand identity development']},
+      {mod:'Pricing Structure & Market Positioning',pts:['Wellness product costing','Premium wellness market strategy','Online and practitioner sales channels']},
+    ]},
   ]},
-  {id:'spa',emoji:'💆🏽‍♀️',name:'Faculty of Spa & Wellness Therapy',tagline:'Facial therapy · Body treatments · Spa business',color:'#2E1A3D',bundle:700000,
-   courses:[
-    {id:'sw1',title:'Professional Facial Therapy',price:250000,level:'Foundation',weeks:'7 weeks',desc:'Deep cleansing & exfoliation protocols and treatment layering techniques for professional, results-driven facial therapy.'},
-    {id:'sw2',title:'Body Treatment Systems',price:200000,level:'Intermediate',weeks:'6 weeks',desc:'Whitening & polishing therapy, and exfoliation & glow systems for full-body professional spa treatments.'},
-    {id:'sw3',title:'Advanced Spa Correction',price:150000,level:'Advanced',weeks:'5 weeks',desc:'Dark area & stretchmark spa treatments and professional client consultation protocols for correction journeys.'},
-    {id:'sw4',title:'Spa Business Structure',price:150000,level:'Mastery',weeks:'5 weeks',desc:'Service pricing, luxury positioning, client retention systems, and workflow management for a profitable spa business.'},
+  {id:'spa',emoji:'💆🏽‍♀️',name:'Faculty of Spa & Wellness Therapy',tagline:'Facial therapy · Body treatments · Spa business',color:'linear-gradient(135deg,#2e1a40,#1a0d28)',bundle:700000,courses:[
+    {id:'sw1',title:'Professional Facial Therapy',price:250000,level:'Foundation',weeks:'7 Weeks',desc:'Master professional facial protocols for results-driven skin therapy.',outline:[
+      {mod:'Deep Cleansing Protocols',pts:['Double cleansing professional techniques','Steam and softening applications','Comedone extraction safely']},
+      {mod:'Exfoliation Techniques',pts:['Manual exfoliation with professional tools','Chemical exfoliation in spa setting','Enzyme mask application protocols']},
+      {mod:'Treatment Layering',pts:['Serum and ampoule layering sequences','Mask selection for skin conditions','Occlusive finishing treatments']},
+      {mod:'Consultation & Client Care',pts:['Professional skin analysis techniques','Contraindication assessment','Building client treatment plans']},
+    ]},
+    {id:'sw2',title:'Body Treatment Systems',price:200000,level:'Intermediate',weeks:'6 Weeks',desc:'Deliver professional full-body spa treatments for glow and correction.',outline:[
+      {mod:'Whitening & Polishing Therapy',pts:['Professional skin lightening treatments','Body polishing techniques and tools','Treatment sequencing for even tone']},
+      {mod:'Exfoliation & Glow Systems',pts:['Sugar and salt scrub application','Enzyme and acid body exfoliation','Post-exfoliation nourishment protocols']},
+      {mod:'Body Wraps & Rituals',pts:['Detox and slimming wrap techniques','Hydrating and nourishing wrap systems','Creating signature body ritual menus']},
+    ]},
+    {id:'sw3',title:'Advanced Spa Correction',price:150000,level:'Advanced',weeks:'5 Weeks',desc:'Professional spa correction for dark areas, stretchmarks and skin concerns.',outline:[
+      {mod:'Dark Area Treatments',pts:['Underarm and inner thigh correction protocols','Knuckle and joint brightening treatments','Professional product selection for dark areas']},
+      {mod:'Stretchmark Spa Protocols',pts:['Layered treatment approach for stretchmarks','Collagen-supporting spa applications','Before and after documentation']},
+      {mod:'Client Consultation Systems',pts:['Correction journey mapping for clients','Setting realistic client expectations','Progress tracking and follow-up systems']},
+    ]},
+    {id:'sw4',title:'Spa Business Structure',price:150000,level:'Mastery',weeks:'5 Weeks',desc:'Build, price, and grow a profitable luxury spa business.',outline:[
+      {mod:'Service Pricing & Luxury Positioning',pts:['Spa service costing calculations','Premium pricing psychology','Creating luxury service packages']},
+      {mod:'Client Retention Systems',pts:['Membership and loyalty programs','Rebooking and follow-up systems','Client communication strategies']},
+      {mod:'Workflow & Operations',pts:['Spa room setup and hygiene protocols','Service time management','Staff training and standards']},
+    ]},
   ]},
 ];
 
-let activeFaculty = null;
-let activeCourse = null;
-let payMethod = 'card';
+let activeFaculty=null,activeCourse=null,payMethod='card',activeTab={};
 
-// Render faculty cards
 function renderFaculties(){
-  document.getElementById('facultiesGrid').innerHTML = FACULTIES.map(f=>`
+  document.getElementById('facultiesGrid').innerHTML=FACULTIES.map(f=>`
     <div class="faculty-card" onclick="openFaculty('${f.id}')">
       <div class="faculty-card-top" style="background:${f.color}">
         <span class="faculty-emoji">${f.emoji}</span>
@@ -395,199 +451,130 @@ function renderFaculties(){
         <div class="faculty-tagline">${f.tagline}</div>
       </div>
       <div class="faculty-card-bottom">
-        <div class="faculty-bundle-row">
-          <div>
-            <div class="bundle-label">Full Bundle</div>
-            <div class="bundle-price">${fmt(f.bundle)}</div>
-          </div>
-        </div>
+        <div class="bundle-label">Full Bundle Price</div>
+        <div class="bundle-price">${fmt(f.bundle)}</div>
         <div class="courses-count">${f.courses.length} courses · available individually</div>
-        <button class="btn-view-courses">View Courses →</button>
+        <button class="btn-view">View Courses →</button>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function openFaculty(id){
-  activeFaculty = FACULTIES.find(f=>f.id===id);
-  if(!activeFaculty) return;
-  document.getElementById('sheetTag').textContent = 'Faculty';
-  document.getElementById('sheetTitle').textContent = activeFaculty.name;
-  document.getElementById('sheetSub').textContent = 'Full Bundle: ' + fmt(activeFaculty.bundle) + ' · or enroll individually below';
-  document.getElementById('sheetBody').innerHTML = activeFaculty.courses.map(c=>`
-    <div class="course-item">
-      <div class="course-row">
-        <div class="course-name">${c.title}</div>
-        <div class="course-price-tag">${fmt(c.price)}</div>
+  activeFaculty=FACULTIES.find(f=>f.id===id);
+  if(!activeFaculty)return;
+  document.getElementById('sheetTitle').textContent=activeFaculty.name;
+  document.getElementById('sheetSub').textContent='Full Bundle: '+fmt(activeFaculty.bundle)+' · or enroll in individual courses below';
+  document.getElementById('sheetBody').innerHTML=activeFaculty.courses.map(c=>{
+    const tab=activeTab[c.id]||'outline';
+    return `<div class="course-item" id="course-${c.id}">
+      <div class="course-item-header">
+        <div class="course-row"><div class="course-name">${c.title}</div><div class="course-price-tag">${fmt(c.price)}</div></div>
+        <div class="course-desc">${c.desc}</div>
+        <div class="course-tags"><span class="tag">${c.level}</span><span class="tag">${c.weeks}</span></div>
       </div>
-      <div class="course-desc">${c.desc}</div>
-      <div class="course-tags">
-        <span class="tag">${c.level}</span>
-        <span class="tag">${c.weeks}</span>
+      <div class="course-tabs">
+        <button class="course-tab ${tab==='outline'?'active':''}" onclick="switchTab('${c.id}','outline')">📋 Course Outline</button>
+        <button class="course-tab ${tab==='enroll'?'active':''}" onclick="switchTab('${c.id}','enroll')">✦ Enroll Now</button>
       </div>
-      <button class="btn-enroll-course" onclick="openCheckout('${activeFaculty.id}','${c.id}')">Enroll — ${fmt(c.price)}</button>
-    </div>
-  `).join('');
+      <div class="course-tab-content ${tab==='outline'?'active':''}" id="tab-outline-${c.id}">
+        ${c.outline.map((m,i)=>`<div class="outline-module"><div class="outline-module-title"><span class="outline-num">${i+1}</span>${m.mod}</div><ul class="outline-bullets">${m.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div>`).join('')}
+      </div>
+      <div class="course-tab-content ${tab==='enroll'?'active':''}" id="tab-enroll-${c.id}">
+        <button class="btn-enroll-main" onclick="openCheckout('${activeFaculty.id}','${c.id}')">Enroll — ${fmt(c.price)}</button>
+        <div class="enroll-note">Card payment via Paystack · Bank transfer accepted<br/>Certificate issued upon completion</div>
+      </div>
+    </div>`;
+  }).join('');
   document.getElementById('facultyOverlay').classList.add('open');
   document.body.style.overflow='hidden';
+}
+
+function switchTab(cid,tab){
+  activeTab[cid]=tab;
+  document.getElementById('tab-outline-'+cid)?.classList.toggle('active',tab==='outline');
+  document.getElementById('tab-enroll-'+cid)?.classList.toggle('active',tab==='enroll');
+  document.querySelectorAll('#course-'+cid+' .course-tab').forEach((t,i)=>t.classList.toggle('active',(i===0&&tab==='outline')||(i===1&&tab==='enroll')));
 }
 
 function closeFacultySheet(e){
   if(!e||e.target===document.getElementById('facultyOverlay')){
     document.getElementById('facultyOverlay').classList.remove('open');
-    if(!document.getElementById('checkoutOverlay').classList.contains('open')) document.body.style.overflow='';
+    if(!document.getElementById('checkoutOverlay').classList.contains('open'))document.body.style.overflow='';
   }
 }
 
-function openCheckout(fid, cid){
-  const fac = FACULTIES.find(f=>f.id===fid);
-  const course = fac?.courses.find(c=>c.id===cid);
-  if(!course) return;
-  activeCourse = course;
-  payMethod = 'card';
-  document.getElementById('checkoutTitle').textContent = course.title;
-  document.getElementById('checkoutSub').textContent = fac.name;
+function openCheckout(fid,cid){
+  const fac=FACULTIES.find(f=>f.id===fid);
+  const course=fac?.courses.find(c=>c.id===cid);
+  if(!course)return;
+  activeCourse=course;payMethod='card';
+  document.getElementById('checkoutTitle').textContent=course.title;
+  document.getElementById('checkoutSub').textContent=fac.name;
   buildCheckout(course);
   document.getElementById('checkoutOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
 }
 
 function buildCheckout(course){
-  const vat = Math.round(course.price * 0.075);
-  const total = course.price + vat;
-  const ref = genRef();
-  document.getElementById('checkoutBody').innerHTML = `
-    <div class="order-summary">
-      <div class="order-line"><span class="order-line-label">Course</span><span class="order-line-val" style="text-align:right;max-width:210px">${course.title}</span></div>
-      <div class="order-line"><span class="order-line-label">Tuition</span><span class="order-line-val">${fmt(course.price)}</span></div>
-      <div class="order-line"><span class="order-line-label">VAT (7.5%)</span><span class="order-line-val">${fmt(vat)}</span></div>
-      <div class="order-line"><span class="order-total-label">Total Due</span><span class="order-total-val">${fmt(total)}</span></div>
+  const vat=Math.round(course.price*0.075),total=course.price+vat,ref=genRef();
+  document.getElementById('checkoutBody').innerHTML=`
+    <div class="order-box">
+      <div class="order-line"><span class="order-lbl">Course</span><span class="order-val" style="text-align:right;max-width:200px">${course.title}</span></div>
+      <div class="order-line"><span class="order-lbl">Tuition</span><span class="order-val">${fmt(course.price)}</span></div>
+      <div class="order-line"><span class="order-lbl">VAT (7.5%)</span><span class="order-val">${fmt(vat)}</span></div>
+      <div class="order-line"><span class="order-total-lbl">Total Due</span><span class="order-total-val">${fmt(total)}</span></div>
     </div>
     <div class="pay-methods">
-      <button class="pay-method ${payMethod==='card'?'active':''}" onclick="switchMethod('card')">
-        <span class="pay-method-icon">💳</span>
-        <div class="pay-method-name">Card Payment</div>
-        <div class="pay-method-hint">Visa · Mastercard · Verve</div>
-      </button>
-      <button class="pay-method ${payMethod==='transfer'?'active':''}" onclick="switchMethod('transfer')">
-        <span class="pay-method-icon">🏦</span>
-        <div class="pay-method-name">Bank Transfer</div>
-        <div class="pay-method-hint">Direct bank transfer</div>
-      </button>
+      <button class="pay-method ${payMethod==='card'?'active':''}" onclick="switchMethod('card')"><span class="pay-method-icon">💳</span><div class="pay-method-name">Card Payment</div><div class="pay-method-hint">Visa · Mastercard · Verve</div></button>
+      <button class="pay-method ${payMethod==='transfer'?'active':''}" onclick="switchMethod('transfer')"><span class="pay-method-icon">🏦</span><div class="pay-method-name">Bank Transfer</div><div class="pay-method-hint">Direct bank transfer</div></button>
     </div>
     <div id="payDetails"></div>
-    <div class="secure-row">🔒 <span>Payments secured by Paystack · 256-bit encryption</span></div>
-  `;
-  renderPayDetails(course, total, ref);
+    <div class="secure-row">🔒 <span>Payments secured by Paystack · 256-bit encryption</span></div>`;
+  renderPayDetails(course,total,ref);
 }
 
-function switchMethod(m){
-  payMethod = m;
-  buildCheckout(activeCourse);
-}
+function switchMethod(m){payMethod=m;buildCheckout(activeCourse);}
 
-function renderPayDetails(course, total, ref){
-  const el = document.getElementById('payDetails');
+function renderPayDetails(course,total,ref){
+  const el=document.getElementById('payDetails');
   if(payMethod==='card'){
-    el.innerHTML = `
-      <label class="field-label">Email Address</label>
-      <input class="field" type="email" id="payEmail" placeholder="your@email.com"/>
-      <label class="field-label">Full Name</label>
-      <input class="field" type="text" id="payName" placeholder="Your full name"/>
-      <button class="btn-pay" id="payBtn" onclick="payNow(${total},'${ref}')">Pay ${fmt(total)} Securely</button>
-    `;
-  } else {
-    el.innerHTML = `
-      <div class="transfer-box">
-        <div class="transfer-name">BeeVerdura Glow Concepts</div>
-        <div class="transfer-line"><span class="transfer-key">Account Number</span><span class="transfer-val">6834283494 <button class="copy-btn" onclick="copyText('6834283494')">Copy</button></span></div>
-        <div class="transfer-line"><span class="transfer-key">Bank</span><span class="transfer-val">Moniepoint MFB</span></div>
-        <div class="transfer-line"><span class="transfer-key">Amount</span><span class="transfer-val">${fmt(total)}</span></div>
-        <div class="transfer-line"><span class="transfer-key">Reference</span><span class="transfer-val">${ref} <button class="copy-btn" onclick="copyText('${ref}')">Copy</button></span></div>
-      </div>
-      <label class="field-label">Your Email (for enrollment confirmation)</label>
-      <input class="field" type="email" id="transferEmail" placeholder="your@email.com"/>
-      <button class="btn-pay" onclick="confirmTransfer('${ref}')">I Have Completed This Transfer</button>
-      <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px;line-height:1.6">Use the reference above when transferring. Enrollment access is sent to your email after confirmation — usually within a few hours.</p>
-    `;
+    el.innerHTML=`<label class="field-lbl">Email Address</label><input class="field" type="email" id="payEmail" placeholder="your@email.com"/><label class="field-lbl">Full Name</label><input class="field" type="text" id="payName" placeholder="Your full name"/><button class="btn-pay" id="payBtn" onclick="payNow(${total},'${ref}')">Pay ${fmt(total)} Securely</button>`;
+  }else{
+    el.innerHTML=`<div class="transfer-box"><div class="transfer-name">BeeVerdura Glow Concepts</div><div class="transfer-line"><span class="transfer-key">Account Number</span><span class="transfer-val">6834283494 <button class="copy-btn" onclick="copyText('6834283494')">Copy</button></span></div><div class="transfer-line"><span class="transfer-key">Bank</span><span class="transfer-val">Moniepoint MFB</span></div><div class="transfer-line"><span class="transfer-key">Amount</span><span class="transfer-val">${fmt(total)}</span></div><div class="transfer-line"><span class="transfer-key">Reference</span><span class="transfer-val">${ref} <button class="copy-btn" onclick="copyText('${ref}')">Copy</button></span></div></div><label class="field-lbl">Your Email (for enrollment confirmation)</label><input class="field" type="email" id="transferEmail" placeholder="your@email.com"/><button class="btn-pay" onclick="confirmTransfer('${ref}')">I Have Completed This Transfer</button><p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px;line-height:1.6;font-weight:300">Use the reference above when transferring. Enrollment access is sent after confirmation.</p>`;
   }
 }
 
-function payNow(total, ref){
-  const email = document.getElementById('payEmail')?.value?.trim();
-  const name = document.getElementById('payName')?.value?.trim();
+function payNow(total,ref){
+  const email=document.getElementById('payEmail')?.value?.trim();
+  const name=document.getElementById('payName')?.value?.trim();
   if(!email||!email.includes('@')){showToast('Please enter a valid email address');return;}
   if(!name){showToast('Please enter your full name');return;}
-  const btn = document.getElementById('payBtn');
+  const btn=document.getElementById('payBtn');
   if(btn){btn.disabled=true;btn.textContent='Opening Paystack...';}
-  const handler = PaystackPop.setup({
-    key: KEY,
-    email: email,
-    amount: total * 100,
-    currency: 'NGN',
-    ref: ref,
-    metadata:{
-      custom_fields:[
-        {display_name:'Student Name',variable_name:'name',value:name},
-        {display_name:'Course',variable_name:'course',value:activeCourse?.title},
-      ]
-    },
-    callback: function(response){
-      showSuccessScreen(activeCourse?.title, email, false);
-    },
-    onClose: function(){
-      if(btn){btn.disabled=false;btn.textContent='Pay ' + fmt(total) + ' Securely';}
-      showToast('Payment window closed');
-    }
+  const handler=PaystackPop.setup({key:KEY,email,amount:total*100,currency:'NGN',ref,
+    metadata:{custom_fields:[{display_name:'Student Name',variable_name:'name',value:name},{display_name:'Course',variable_name:'course',value:activeCourse?.title}]},
+    callback:()=>showSuccessScreen(activeCourse?.title,email,false),
+    onClose:()=>{if(btn){btn.disabled=false;btn.textContent='Pay '+fmt(total)+' Securely';}showToast('Payment window closed');}
   });
   handler.openIframe();
 }
 
 function confirmTransfer(ref){
-  const email = document.getElementById('transferEmail')?.value?.trim();
+  const email=document.getElementById('transferEmail')?.value?.trim();
   if(!email||!email.includes('@')){showToast('Please enter your email address');return;}
-  showSuccessScreen(activeCourse?.title, email, true);
+  showSuccessScreen(activeCourse?.title,email,true);
 }
 
-function showSuccessScreen(title, email, isTransfer){
-  document.getElementById('checkoutBody').innerHTML = `
-    <div class="success-wrap">
-      <div class="success-circle">✓</div>
-      <div class="success-title">${isTransfer ? 'Transfer Noted!' : 'Payment Successful!'}</div>
-      <p class="success-text">${isTransfer
-        ? 'Thank you! Your enrollment will be activated once we confirm your transfer. We\'ll send your course access to <strong>' + email + '</strong> — usually within a few hours.'
-        : 'Welcome to <strong>' + title + '</strong>! Your course access details have been sent to <strong>' + email + '</strong>. Check your inbox to get started.'
-      }</p>
-      <button class="btn-pay" onclick="closeCheckout()">Done</button>
-    </div>
-  `;
+function showSuccessScreen(title,email,isTransfer){
+  document.getElementById('checkoutBody').innerHTML=`<div class="success-wrap"><div class="success-circle">✓</div><div class="success-title">${isTransfer?'Transfer Noted!':'Payment Successful!'}</div><p class="success-text">${isTransfer?'Thank you! Your enrollment will be activated once we confirm your transfer. We\'ll send your course access to <strong>'+email+'</strong> — usually within a few hours.':'Welcome to <strong>'+title+'</strong>! Your course access details have been sent to <strong>'+email+'</strong>. Check your inbox to get started.'}</p><button class="btn-pay" onclick="closeCheckout()">Done</button></div>`;
 }
 
 function closeCheckout(e){
-  if(!e||e.target===document.getElementById('checkoutOverlay')){
-    document.getElementById('checkoutOverlay').classList.remove('open');
-    document.body.style.overflow='';
-  }
+  if(!e||e.target===document.getElementById('checkoutOverlay')){document.getElementById('checkoutOverlay').classList.remove('open');document.body.style.overflow='';}
 }
 
-function copyText(text){
-  navigator.clipboard.writeText(text).then(()=>showToast('Copied to clipboard!'));
-}
-
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),3000);
-}
-
-function scrollToFaculties(){
-  document.getElementById('faculties').scrollIntoView({behavior:'smooth',block:'start'});
-}
-function scrollToWhy(){
-  document.getElementById('why').scrollIntoView({behavior:'smooth',block:'start'});
-}
-
+function copyText(t){navigator.clipboard.writeText(t).then(()=>showToast('Copied!'));}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000);}
+function scrollToEl(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth',block:'start'});}
 renderFaculties();
 </script>
 </body>
